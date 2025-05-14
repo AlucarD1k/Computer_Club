@@ -17,9 +17,24 @@ public class ComputerController : Controller
 
     public IActionResult Index()
     {
+        var now = DateTime.Now;
+
+        var busyComputerIds = _context.Bookings
+            .Where(b => b.StartTime <= now && b.EndTime > now)
+            .Select(b => b.ComputerId)
+            .ToHashSet();
+
         var computers = _context.Computers.ToList();
+        foreach (var comp in computers)
+        {
+            comp.IsBooked = busyComputerIds.Contains(comp.Id);
+        }
+
+        _context.SaveChanges(); // Обновляем поле в базе
+
         return View(computers);
     }
+
     
     [HttpGet]
     public IActionResult Create() 

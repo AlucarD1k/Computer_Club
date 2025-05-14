@@ -212,10 +212,11 @@
 /Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/bin/Debug/net9.0/runtimes/win-x64/native/e_sqlite3.dll
 /Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/bin/Debug/net9.0/runtimes/win-x86/native/e_sqlite3.dll
 /Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/Computer_Club.csproj.AssemblyReference.cache
-/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/y5lqju7dio-j7xg1ktk9w.gz
-/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/ohe8hjt5di-hbh6lz2uwc.gz
 /Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/Computer.6EB93DE4.Up2Date
 /Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
 /Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/67y67s44d2-kwyyrns4iz.gz
 /Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/khsugvmtj8-kwyyrns4iz.gz
 /Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/tbqrzqgg1b-a7mausczqs.gz
+/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/Computer_Club.sourcelink.json
+/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/y5lqju7dio-5zraa2cn8a.gz
+/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/ohe8hjt5di-76azmucknv.gz

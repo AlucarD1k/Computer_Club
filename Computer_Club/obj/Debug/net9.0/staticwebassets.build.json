@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OBQg/nXM0grQZS7FWmnJP8Eixlc2PapmSrv6gTKvD+g=",
+  "Hash": "ySURNmfpZ+qXH36N0BMmkUqXvSyMss8b2vL6SpzZnJQ=",
   "Source": "Computer_Club",
   "BasePath": "_content/Computer_Club",
   "Mode": "Default",
@@ -899,12 +899,12 @@
       "OriginalItemSpec": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/wwwroot/lib/bootstrap/dist/js/bootstrap.js"
     },
     {
-      "Identity": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/ohe8hjt5di-hbh6lz2uwc.gz",
+      "Identity": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/ohe8hjt5di-76azmucknv.gz",
       "SourceId": "Computer_Club",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/Computer_Club",
-      "RelativePath": "js/site#[.{fingerprint=hbh6lz2uwc}]?.js.gz",
+      "RelativePath": "js/site#[.{fingerprint=76azmucknv}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -913,8 +913,8 @@
       "RelatedAsset": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/wwwroot/js/site.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "jvockthl5b",
-      "Integrity": "EX91l+tqu1zSXKksPxiwLBpaMd8wTJeSwxKMEXRsAv8=",
+      "Fingerprint": "rb3yqi08zv",
+      "Integrity": "qdisVooTNdLDQyAaI32wE54tuZMkP8wv2EVbr9iMHLQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/wwwroot/js/site.js"
@@ -1235,12 +1235,12 @@
       "OriginalItemSpec": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/y5lqju7dio-j7xg1ktk9w.gz",
+      "Identity": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/y5lqju7dio-5zraa2cn8a.gz",
       "SourceId": "Computer_Club",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/Computer_Club",
-      "RelativePath": "css/site#[.{fingerprint=j7xg1ktk9w}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=5zraa2cn8a}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1249,8 +1249,8 @@
       "RelatedAsset": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/wwwroot/css/site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "seqaf1c2cf",
-      "Integrity": "zAhEGyalxrPBSNLreVhBwQY3oXlgPjZzhKhJGNhKSM0=",
+      "Fingerprint": "or7v9s6sxf",
+      "Integrity": "FDKtrD1XHb4EF8PVfTc+UjyO4NRTREvnYOMJtwmOnGA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/wwwroot/css/site.css"
@@ -1438,8 +1438,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "j7xg1ktk9w",
-      "Integrity": "H02ldsNAHiomWcoIOxD9KvDjTq2yTpsx0p8/NmophSA=",
+      "Fingerprint": "5zraa2cn8a",
+      "Integrity": "Ib7JaEdl1N8uQO1HjOva6ISW3k1e56uEf1Gbh8YrZBY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
@@ -1522,8 +1522,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "hbh6lz2uwc",
-      "Integrity": "0yFDcCAzMAaEp2I6gjhFMWi76HmSydFTmDySpc69cY4=",
+      "Fingerprint": "76azmucknv",
+      "Integrity": "P+zwqVotdR46ZX0pI7BghbISEE1wJpdZ4iFW+QW54Bw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/site.js"
@@ -3387,13 +3387,13 @@
       ]
     },
     {
-      "Route": "css/site.css",
-      "AssetFile": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/y5lqju7dio-j7xg1ktk9w.gz",
+      "Route": "css/site.5zraa2cn8a.css",
+      "AssetFile": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/y5lqju7dio-5zraa2cn8a.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.002145922747"
+          "Quality": "0.001014198783"
         }
       ],
       "ResponseHeaders": [
@@ -3403,19 +3403,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "465"
+          "Value": "985"
         },
         {
           "Name": "ETag",
-          "Value": "\"zAhEGyalxrPBSNLreVhBwQY3oXlgPjZzhKhJGNhKSM0=\""
+          "Value": "\"FDKtrD1XHb4EF8PVfTc+UjyO4NRTREvnYOMJtwmOnGA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 09:04:02 GMT"
+          "Value": "Wed, 14 May 2025 07:20:30 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Value": "max-age=31536000, immutable"
         },
         {
           "Name": "Content-Encoding",
@@ -3431,18 +3431,26 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"H02ldsNAHiomWcoIOxD9KvDjTq2yTpsx0p8/NmophSA=\""
+          "Value": "W/\"Ib7JaEdl1N8uQO1HjOva6ISW3k1e56uEf1Gbh8YrZBY=\""
         }
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "5zraa2cn8a"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-H02ldsNAHiomWcoIOxD9KvDjTq2yTpsx0p8/NmophSA="
+          "Value": "sha256-Ib7JaEdl1N8uQO1HjOva6ISW3k1e56uEf1Gbh8YrZBY="
         }
       ]
     },
     {
-      "Route": "css/site.css",
+      "Route": "css/site.5zraa2cn8a.css",
       "AssetFile": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/wwwroot/css/site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3452,7 +3460,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1029"
+          "Value": "2270"
         },
         {
           "Name": "Content-Type",
@@ -3460,121 +3468,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"H02ldsNAHiomWcoIOxD9KvDjTq2yTpsx0p8/NmophSA=\""
+          "Value": "\"Ib7JaEdl1N8uQO1HjOva6ISW3k1e56uEf1Gbh8YrZBY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 09:04:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-H02ldsNAHiomWcoIOxD9KvDjTq2yTpsx0p8/NmophSA="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css.gz",
-      "AssetFile": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/y5lqju7dio-j7xg1ktk9w.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "465"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"zAhEGyalxrPBSNLreVhBwQY3oXlgPjZzhKhJGNhKSM0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 09:04:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-zAhEGyalxrPBSNLreVhBwQY3oXlgPjZzhKhJGNhKSM0="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.j7xg1ktk9w.css",
-      "AssetFile": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/y5lqju7dio-j7xg1ktk9w.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.002145922747"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "465"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"zAhEGyalxrPBSNLreVhBwQY3oXlgPjZzhKhJGNhKSM0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 09:04:02 GMT"
+          "Value": "Wed, 14 May 2025 07:20:30 GMT"
         },
         {
           "Name": "Cache-Control",
           "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"H02ldsNAHiomWcoIOxD9KvDjTq2yTpsx0p8/NmophSA=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "j7xg1ktk9w"
+          "Value": "5zraa2cn8a"
         },
         {
           "Name": "label",
@@ -3582,13 +3490,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-H02ldsNAHiomWcoIOxD9KvDjTq2yTpsx0p8/NmophSA="
+          "Value": "sha256-Ib7JaEdl1N8uQO1HjOva6ISW3k1e56uEf1Gbh8YrZBY="
         }
       ]
     },
     {
-      "Route": "css/site.j7xg1ktk9w.css",
-      "AssetFile": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/wwwroot/css/site.css",
+      "Route": "css/site.5zraa2cn8a.css.gz",
+      "AssetFile": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/y5lqju7dio-5zraa2cn8a.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3597,7 +3505,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1029"
+          "Value": "985"
         },
         {
           "Name": "Content-Type",
@@ -3605,56 +3513,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"H02ldsNAHiomWcoIOxD9KvDjTq2yTpsx0p8/NmophSA=\""
+          "Value": "\"FDKtrD1XHb4EF8PVfTc+UjyO4NRTREvnYOMJtwmOnGA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 09:04:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "j7xg1ktk9w"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-H02ldsNAHiomWcoIOxD9KvDjTq2yTpsx0p8/NmophSA="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.j7xg1ktk9w.css.gz",
-      "AssetFile": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/y5lqju7dio-j7xg1ktk9w.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "465"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"zAhEGyalxrPBSNLreVhBwQY3oXlgPjZzhKhJGNhKSM0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 09:04:02 GMT"
+          "Value": "Wed, 14 May 2025 07:20:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3672,7 +3535,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "j7xg1ktk9w"
+          "Value": "5zraa2cn8a"
         },
         {
           "Name": "label",
@@ -3680,7 +3543,144 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-zAhEGyalxrPBSNLreVhBwQY3oXlgPjZzhKhJGNhKSM0="
+          "Value": "sha256-FDKtrD1XHb4EF8PVfTc+UjyO4NRTREvnYOMJtwmOnGA="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/y5lqju7dio-5zraa2cn8a.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001014198783"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "985"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FDKtrD1XHb4EF8PVfTc+UjyO4NRTREvnYOMJtwmOnGA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 07:20:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"Ib7JaEdl1N8uQO1HjOva6ISW3k1e56uEf1Gbh8YrZBY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ib7JaEdl1N8uQO1HjOva6ISW3k1e56uEf1Gbh8YrZBY="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/wwwroot/css/site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2270"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ib7JaEdl1N8uQO1HjOva6ISW3k1e56uEf1Gbh8YrZBY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 07:20:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ib7JaEdl1N8uQO1HjOva6ISW3k1e56uEf1Gbh8YrZBY="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css.gz",
+      "AssetFile": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/y5lqju7dio-5zraa2cn8a.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "985"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FDKtrD1XHb4EF8PVfTc+UjyO4NRTREvnYOMJtwmOnGA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 07:20:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FDKtrD1XHb4EF8PVfTc+UjyO4NRTREvnYOMJtwmOnGA="
         }
       ]
     },
@@ -4363,13 +4363,13 @@
       ]
     },
     {
-      "Route": "js/site.hbh6lz2uwc.js",
-      "AssetFile": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/ohe8hjt5di-hbh6lz2uwc.gz",
+      "Route": "js/site.76azmucknv.js",
+      "AssetFile": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/ohe8hjt5di-76azmucknv.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.003144654088"
+          "Quality": "0.003086419753"
         }
       ],
       "ResponseHeaders": [
@@ -4379,15 +4379,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "317"
+          "Value": "323"
         },
         {
           "Name": "ETag",
-          "Value": "\"EX91l+tqu1zSXKksPxiwLBpaMd8wTJeSwxKMEXRsAv8=\""
+          "Value": "\"qdisVooTNdLDQyAaI32wE54tuZMkP8wv2EVbr9iMHLQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 09:04:02 GMT"
+          "Value": "Wed, 14 May 2025 07:20:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4407,13 +4407,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"0yFDcCAzMAaEp2I6gjhFMWi76HmSydFTmDySpc69cY4=\""
+          "Value": "W/\"P+zwqVotdR46ZX0pI7BghbISEE1wJpdZ4iFW+QW54Bw=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "hbh6lz2uwc"
+          "Value": "76azmucknv"
         },
         {
           "Name": "label",
@@ -4421,12 +4421,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-0yFDcCAzMAaEp2I6gjhFMWi76HmSydFTmDySpc69cY4="
+          "Value": "sha256-P+zwqVotdR46ZX0pI7BghbISEE1wJpdZ4iFW+QW54Bw="
         }
       ]
     },
     {
-      "Route": "js/site.hbh6lz2uwc.js",
+      "Route": "js/site.76azmucknv.js",
       "AssetFile": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/wwwroot/js/site.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -4436,7 +4436,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "507"
+          "Value": "534"
         },
         {
           "Name": "Content-Type",
@@ -4444,11 +4444,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0yFDcCAzMAaEp2I6gjhFMWi76HmSydFTmDySpc69cY4=\""
+          "Value": "\"P+zwqVotdR46ZX0pI7BghbISEE1wJpdZ4iFW+QW54Bw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 09:04:02 GMT"
+          "Value": "Wed, 14 May 2025 07:20:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4458,7 +4458,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "hbh6lz2uwc"
+          "Value": "76azmucknv"
         },
         {
           "Name": "label",
@@ -4466,13 +4466,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-0yFDcCAzMAaEp2I6gjhFMWi76HmSydFTmDySpc69cY4="
+          "Value": "sha256-P+zwqVotdR46ZX0pI7BghbISEE1wJpdZ4iFW+QW54Bw="
         }
       ]
     },
     {
-      "Route": "js/site.hbh6lz2uwc.js.gz",
-      "AssetFile": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/ohe8hjt5di-hbh6lz2uwc.gz",
+      "Route": "js/site.76azmucknv.js.gz",
+      "AssetFile": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/ohe8hjt5di-76azmucknv.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4481,7 +4481,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "317"
+          "Value": "323"
         },
         {
           "Name": "Content-Type",
@@ -4489,11 +4489,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EX91l+tqu1zSXKksPxiwLBpaMd8wTJeSwxKMEXRsAv8=\""
+          "Value": "\"qdisVooTNdLDQyAaI32wE54tuZMkP8wv2EVbr9iMHLQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 09:04:02 GMT"
+          "Value": "Wed, 14 May 2025 07:20:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4511,7 +4511,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "hbh6lz2uwc"
+          "Value": "76azmucknv"
         },
         {
           "Name": "label",
@@ -4519,18 +4519,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-EX91l+tqu1zSXKksPxiwLBpaMd8wTJeSwxKMEXRsAv8="
+          "Value": "sha256-qdisVooTNdLDQyAaI32wE54tuZMkP8wv2EVbr9iMHLQ="
         }
       ]
     },
     {
       "Route": "js/site.js",
-      "AssetFile": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/ohe8hjt5di-hbh6lz2uwc.gz",
+      "AssetFile": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/ohe8hjt5di-76azmucknv.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.003144654088"
+          "Quality": "0.003086419753"
         }
       ],
       "ResponseHeaders": [
@@ -4540,15 +4540,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "317"
+          "Value": "323"
         },
         {
           "Name": "ETag",
-          "Value": "\"EX91l+tqu1zSXKksPxiwLBpaMd8wTJeSwxKMEXRsAv8=\""
+          "Value": "\"qdisVooTNdLDQyAaI32wE54tuZMkP8wv2EVbr9iMHLQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 09:04:02 GMT"
+          "Value": "Wed, 14 May 2025 07:20:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4568,13 +4568,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"0yFDcCAzMAaEp2I6gjhFMWi76HmSydFTmDySpc69cY4=\""
+          "Value": "W/\"P+zwqVotdR46ZX0pI7BghbISEE1wJpdZ4iFW+QW54Bw=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-0yFDcCAzMAaEp2I6gjhFMWi76HmSydFTmDySpc69cY4="
+          "Value": "sha256-P+zwqVotdR46ZX0pI7BghbISEE1wJpdZ4iFW+QW54Bw="
         }
       ]
     },
@@ -4589,7 +4589,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "507"
+          "Value": "534"
         },
         {
           "Name": "Content-Type",
@@ -4597,11 +4597,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0yFDcCAzMAaEp2I6gjhFMWi76HmSydFTmDySpc69cY4=\""
+          "Value": "\"P+zwqVotdR46ZX0pI7BghbISEE1wJpdZ4iFW+QW54Bw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 09:04:02 GMT"
+          "Value": "Wed, 14 May 2025 07:20:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4611,13 +4611,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-0yFDcCAzMAaEp2I6gjhFMWi76HmSydFTmDySpc69cY4="
+          "Value": "sha256-P+zwqVotdR46ZX0pI7BghbISEE1wJpdZ4iFW+QW54Bw="
         }
       ]
     },
     {
       "Route": "js/site.js.gz",
-      "AssetFile": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/ohe8hjt5di-hbh6lz2uwc.gz",
+      "AssetFile": "/Users/daniilsilkin/RiderProjects/Computer_Club/Computer_Club/obj/Debug/net9.0/compressed/ohe8hjt5di-76azmucknv.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4626,7 +4626,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "317"
+          "Value": "323"
         },
         {
           "Name": "Content-Type",
@@ -4634,11 +4634,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EX91l+tqu1zSXKksPxiwLBpaMd8wTJeSwxKMEXRsAv8=\""
+          "Value": "\"qdisVooTNdLDQyAaI32wE54tuZMkP8wv2EVbr9iMHLQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 09:04:02 GMT"
+          "Value": "Wed, 14 May 2025 07:20:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4656,7 +4656,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-EX91l+tqu1zSXKksPxiwLBpaMd8wTJeSwxKMEXRsAv8="
+          "Value": "sha256-qdisVooTNdLDQyAaI32wE54tuZMkP8wv2EVbr9iMHLQ="
         }
       ]
     },

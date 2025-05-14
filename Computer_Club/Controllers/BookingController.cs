@@ -21,7 +21,6 @@ public class BookingController : Controller
 
     public IActionResult Index()
     {
-        // ... (Index action remains the same) ...
         var bookings = _context.Bookings
             .Include(b => b.User)
             .Include(b => b.Computer)
@@ -52,7 +51,6 @@ public class BookingController : Controller
             .OrderBy(u => u.UserName) // Good practice to order dropdowns
             .ToList();
         ViewBag.Computers = _context.Computers
-            .Where(c => !c.IsBooked) // Keep original filter for now
             .OrderBy(c => c.Name)   // Good practice to order dropdowns
             .ToList();
 
@@ -140,7 +138,7 @@ public class BookingController : Controller
             _logger.LogInformation("Booking saved successfully. Redirecting to Index.");
 
             TempData["SuccessMessage"] = $"Booking for computer {booking.ComputerId} from {booking.StartTime} to {booking.EndTime} created successfully!";
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index", "Booking");
         }
         catch (DbUpdateException ex)
         {
@@ -263,7 +261,7 @@ public class BookingController : Controller
                 _context.SaveChanges(); // Сохраняем изменения
                 _logger.LogInformation("Booking {Id} updated successfully.", id);
                 TempData["SuccessMessage"] = $"Бронь ID {id} успешно обновлена.";
-                return RedirectToAction(nameof(Index)); // Перенаправляем на список
+                return RedirectToAction("Index", "Booking");
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -318,7 +316,7 @@ public class BookingController : Controller
              _logger.LogWarning("Booking with Id {Id} not found for Delete POST", id);
             // Можно вернуть NotFound, или Redirect с сообщением об ошибке
             TempData["ErrorMessage"] = $"Бронь с ID {id} не найдена.";
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index", "Booking");
         }
 
         try
@@ -327,7 +325,7 @@ public class BookingController : Controller
             _context.SaveChanges(); // Применяем удаление в базе
             _logger.LogInformation("Booking {Id} deleted successfully.", id);
             TempData["SuccessMessage"] = $"Бронь ID {id} успешно удалена.";
-            return RedirectToAction(nameof(Index)); // Возвращаемся к списку
+            return RedirectToAction("Index", "Booking");
         }
         catch (DbUpdateException ex) // Обработка ошибок БД (например, связанных с внешними ключами, если они есть и настроены на запрет удаления)
         {
@@ -335,13 +333,13 @@ public class BookingController : Controller
             // Сообщаем пользователю об ошибке
             TempData["ErrorMessage"] = $"Ошибка при удалении брони ID {id}. Возможно, есть связанные данные.";
             // Можно добавить более специфичную обработку ошибок внешних ключей, если нужно
-            return RedirectToAction(nameof(Index)); // Возвращаемся к списку
+            return RedirectToAction("Index", "Booking");
         }
         catch (Exception ex) // Обработка других непредвиденных ошибок
         {
              _logger.LogError(ex, "Unexpected error deleting booking {Id}", id);
              TempData["ErrorMessage"] = $"Непредвиденная ошибка при удалении брони ID {id}.";
-             return RedirectToAction(nameof(Index));
+             return RedirectToAction("Index", "Booking");
         }
     }
 }

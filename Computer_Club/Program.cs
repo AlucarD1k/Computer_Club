@@ -9,6 +9,9 @@ builder.Services.AddControllersWithViews();
 // Подключаем контекст базы данных
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+//подключаем сервис для обновления броней
+builder.Services.AddHostedService<BookingUpdateService>();
+
 
 var app = builder.Build();
 

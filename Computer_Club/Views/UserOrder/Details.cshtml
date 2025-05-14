@@ -1,0 +1,42 @@
+@model Computer_Club.Models.UserOrder
+@{
+    ViewData["Title"] = "Order Details";
+}
+
+<h2>Order Id @Model.Id Details</h2>
+
+<p>
+    <strong>User:</strong> @Model.User?.UserName<br />
+    <strong>Date:</strong> @Model.OrderDate.ToString("g")<br />
+    <strong>Total:</strong> @Model.Total.ToString("C")
+</p>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price each</th>
+        <th>Line Total</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.OrderItems)
+    {
+        <tr>
+            <td>@item.Product?.Name</td>
+            <td>@item.Quantity</td>
+            <td>@item.Product?.Price.ToString("C")</td>
+            <td>@(((decimal)(item.Quantity * item.Product.Price)).ToString("C"))</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+
+<p>
+    <a asp-action="Index" class="btn btn-secondary">Back to Orders</a>
+    <button>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn">Edit</a>
+    </button>
+</p>

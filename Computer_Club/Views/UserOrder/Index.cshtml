@@ -1,0 +1,53 @@
+@model IEnumerable<Computer_Club.Models.UserOrder>
+@{
+    ViewData["Title"] = "User Orders";
+}
+
+<h2>User Orders</h2>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>User</th>
+        <th>Date</th>
+        <th>Total</th>
+        <th>Details</th>
+        <th>Remove</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var order in Model)
+    {
+        <tr>
+            <td>@order.Id</td>
+            <td>@order.User?.UserName</td>
+            <td>@order.OrderDate.ToString("g")</td>
+            <td>@order.Total.ToString("C")</td>
+            <td>
+                <a asp-action="Details" asp-route-id="@order.Id" class="btn btn-sm btn-info">
+                    Details
+                </a>
+            </td>
+            <td>
+                <form asp-action="Delete" asp-route-id="@order.Id" method="post" style="display:inline"
+                      onsubmit="return confirm('Are you sure you want to remove order #@order.Id?');">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="_method" value="DELETE" />
+                    <button type="submit" class="btn btn-sm btn-danger">Remove</button>
+                </form>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+<div>
+    <a asp-action="Create" class="btn btn-primary">New Order</a>
+</div>

@@ -1,0 +1,130 @@
+@* Update the model directive to use the ViewModel *@
+@model Computer_Club.ViewModels.BookingCreateViewModel
+@{
+    ViewData["Title"] = "Book a computer";
+    // Cast ViewBag data (consider moving this data into the ViewModel for type safety)
+    var users     = ViewBag.Users     as List<Computer_Club.Models.User>;
+    var computers = ViewBag.Computers as List<Computer_Club.Models.Computer>;
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@* Add a validation summary to display all errors, including the general ones *@
+@Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+<form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+    @* Remove the old ValidationSummary(true) if you added the one above *@
+    @* @Html.ValidationSummary(true) *@
+
+    <div class="mb-3"> @* Added some basic spacing/styling classes (assuming Bootstrap or similar) *@
+        <label asp-for="UserId" class="form-label"></label> @* Use Tag Helper for label *@
+        <select asp-for="UserId" class="form-control" asp-items="@(new SelectList(users, "UserId", "UserName"))" required> @* Use Tag Helpers for select *@
+            <option value="">-- select user --</option>
+        </select>
+        <span asp-validation-for="UserId" class="text-danger"></span> @* Display validation error for this field *@
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ComputerId" class="form-label"></label>
+        <select asp-for="ComputerId" class="form-control" asp-items="@(new SelectList(computers, "Id", "Name"))" required>
+            <option value="">-- select computer --</option>
+        </select>
+        <span asp-validation-for="ComputerId" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="StartTime" class="form-label"></label>
+        <input asp-for="StartTime" type="datetime-local" class="form-control" value="@Model.StartTime.ToString("yyyy-MM-ddTHH:mm")" required />
+        <span asp-validation-for="StartTime" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="EndTime" class="form-label"></label>
+        <input asp-for="EndTime" type="datetime-local" class="form-control" value="@Model.EndTime.ToString("yyyy-MM-ddTHH:mm")" required />
+        <span asp-validation-for="EndTime" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Book</button> @* Added basic button class *@
+</form>
+
+@* Include validation scripts if you haven't already in _Layout.cshtml or elsewhere *@
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+
+@*
+@model Computer_Club.ViewModels.BookingCreateViewModel
+@{
+    ViewData["Title"] = "Book a computer";
+    var users     = ViewBag.Users     as List<Computer_Club.Models.User>;
+    var computers = ViewBag.Computers as List<Computer_Club.Models.Computer>;
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div>
+        <label for="UserId">User</label>
+        <select id="UserId" name="UserId" required>
+            <option value="">-- select user --</option>
+            @foreach (var u in users)
+            {
+                if (u.UserId == Model.UserId)
+                {
+                    <option value="@u.UserId" selected="selected">@u.UserName</option>
+                }
+                else
+                {
+                    <option value="@u.UserId">@u.UserName</option>
+                }
+            }
+        </select>
+    </div>
+
+    <div>
+        <label for="ComputerId">Computer</label>
+        <select id="ComputerId" name="ComputerId" required>
+            <option value="">-- select computer --</option>
+            @foreach (var c in computers)
+            {
+                if (c.Id == Model.ComputerId)
+                {
+                    <option value="@c.Id" selected="selected">@c.Name</option>
+                }
+                else
+                {
+                    <option value="@c.Id">@c.Name</option>
+                }
+            }
+        </select>
+    </div>
+
+    <div>
+        <label for="StartTime">Start at</label>
+        <input
+            type="datetime-local"
+            id="StartTime"
+            name="StartTime"
+            value="@Model.StartTime.ToString("yyyy-MM-ddTHH:mm")"
+            required />
+    </div>
+
+    <div>
+        <label for="EndTime">End at</label>
+        <input
+            type="datetime-local"
+            id="EndTime"
+            name="EndTime"
+            value="@Model.EndTime.ToString("yyyy-MM-ddTHH:mm")"
+            required />
+    </div>
+
+    <button type="submit">Book</button>
+</form>
+*@

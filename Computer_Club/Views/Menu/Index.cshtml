@@ -1,0 +1,43 @@
+@model IEnumerable<Computer_Club.Models.Product>
+@{
+     ViewData["Title"] = "Menu";
+ }
+ 
+ <h2>Our menu</h2>
+ 
+ <table class="table">
+     <thead>
+     <tr>
+         <th>Position</th>
+         <th>Price</th>
+         <th>Edit</th>
+         <th>Remove</th>
+     </tr>
+     </thead>
+     <tbody>
+     @foreach (Product product in Model)
+     {
+         <tr>
+             <td>@product.Name</td>
+             <td>@product.Price</td>
+             <td>
+                 <a href="@Url.Action("Edit", "Menu", new { id = product.Id })" method="post" style="display: inline">
+                     <button>Edit</button>
+                 </a>
+             </td>
+             <td>
+                 <form action="@Url.Action("Delete", "Menu", new { id = product.Id })" method="post" style="display: inline">
+                     @Html.AntiForgeryToken()
+                     <input type="hidden" name="_method" value="DELETE"/>
+                     <button type="submit" class="btn btn-danger">Remove</button>
+                 </form>
+             </td>
+         </tr>
+     }
+     </tbody>
+ </table>
+<div>
+    <a class="nav-link text-dark" asp-aera="" asp-controller="Menu" asp-action="Create">
+        <button>Add new position</button>
+    </a>
+</div>

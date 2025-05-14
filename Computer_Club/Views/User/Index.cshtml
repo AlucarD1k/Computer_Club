@@ -1,0 +1,42 @@
+@model IEnumerable<Computer_Club.Models.User>
+
+@{
+    ViewData["Title"] = "Users";
+}
+
+<h2>Users</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>IsAdmin</th>
+        <th>Edit</th>
+        <th>Remove</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (User user in Model)
+    {
+        <tr>
+            <td>@user.UserName</td>
+            <td>@user.Email</td>
+            <td>@user.IsAdmin</td>
+            <td>
+                <a href="@Url.Action("Edit", "User", new { id = user.UserId })" method="post" style="display: inline">
+                    <button>Edit</button>
+                </a>
+            </td>
+            <td>
+                <!-- Форма для удаления компьютера -->
+                <form action="@Url.Action("Delete", "User", new { id = user.UserId  })" method="post" style="display:inline;">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="_method" value="DELETE" /> <!-- Имитация метода DELETE -->
+                    <button type="submit" class="btn btn-danger">Remove</button>
+                </form>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

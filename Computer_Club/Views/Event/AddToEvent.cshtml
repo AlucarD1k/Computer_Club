@@ -1,0 +1,32 @@
+@model Computer_Club.Models.AddToEventViewModel
+
+@{
+    ViewData["Title"] = "Manage Users for Event: " + Model.EventName;
+}
+
+<h2>Manage Users for Event: @Model.EventName</h2>
+
+@Html.ValidationSummary(true)
+
+<form asp-action="AddToEvent" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="EventId" />
+
+    <div>
+        <h3>Select Users to register:</h3>
+        @foreach (var user in Model.AllUsers)
+        {
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"
+                       name="SelectedUserIds"
+                       value="@user.UserId"
+                       id="user_@user.UserId"
+                       @(Model.SelectedUserIds.Contains(user.UserId) ? "checked" : "") />
+                <label class="form-check-label" for="user_@user.UserId">
+                    @user.UserName (@user.Email)
+                </label>
+            </div>
+        }
+    </div>
+    <button type="submit" class="btn btn-primary">Update Registrations</button>
+</form>

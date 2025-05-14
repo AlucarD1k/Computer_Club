@@ -1,0 +1,65 @@
+@model Computer_Club.ViewModels.BookingEditViewModel
+@{
+    ViewData["Title"] = "Редактировать бронь";
+    // Получаем список компьютеров из ViewBag
+    var computers = ViewBag.Computers as List<Computer_Club.Models.Computer>;
+    // Создаем SelectList для Tag Helper'а
+    var computerSelectList = computers != null
+        ? new SelectList(computers, "Id", "Name", Model.ComputerId) // Указываем выбранное значение Model.ComputerId
+        : Enumerable.Empty<SelectListItem>();
+}
+
+<h2>@ViewData["Title"]</h2>
+<hr />
+<div class="row">
+    <div class="col-md-6"> @* Ограничим ширину формы *@
+        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+        <form asp-action="Edit" method="post">
+            @Html.AntiForgeryToken()
+            @* Важно передать ID бронирования *@
+            <input type="hidden" asp-for="Id" />
+            @* Также передаем UserId и StartTime, хотя они не редактируются,
+               чтобы ViewModel была полностью заполнена при возврате на форму в случае ошибки *@
+            <input type="hidden" asp-for="UserId" />
+            <input type="hidden" asp-for="StartTime" />
+
+
+            <div class="mb-3">
+                <label asp-for="UserName" class="form-label"></label>
+                <input asp-for="UserName" class="form-control" readonly /> @* Поле только для чтения *@
+            </div>
+
+            
+
+            <div class="mb-3">
+                <label asp-for="ComputerId" class="form-label"></label>
+                <select asp-for="ComputerId" class="form-select" asp-items="computerSelectList" required> @* Используем form-select для стилизации Bootstrap *@
+                    <option value="">-- выберите компьютер --</option>
+                </select>
+                <span asp-validation-for="ComputerId" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="StartTime" class="form-label"></label>
+                <input asp-for="StartTime" type="text" class="form-control" readonly value="@Model.StartTime.ToString("dd.MM.yyyy HH:mm")" /> @* Поле только для чтения, форматируем *@
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="EndTime" class="form-label"></label>
+                @* Используем правильный формат для datetime-local *@
+                <input asp-for="EndTime" type="datetime-local" class="form-control" value="@Model.EndTime.ToString("yyyy-MM-ddTHH:mm")" required />
+                <span asp-validation-for="EndTime" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+                <a asp-action="Index" class="btn btn-secondary">Отмена</a> @* Кнопка отмены *@
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{ Html.RenderPartial("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,26 @@
+﻿
+
+
+@model Computer_Club.Models.HomeCurrentCompUser
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="main">
+    <div class="lozung">
+        <h1>Computer Club - more than just game</h1>
+        <button class="lozung-btn">
+            <a asp-controller="Registration" asp-action="Register">Зарегистрироваться</a>
+        </button>
+    </div>
+    <div class="current">
+        <p class="navbar-toggler">Уже с нами: <span>@Model.RegisteredUsersCount</span> пользователей</p>
+        <p class="navbar-toggler">Свободно на данный момент: <span>@Model.FreeComputersCount</span> компьютеров</p>
+        <p class="navbar-toggler">В ассортименте <span>@Model.ProductsCount</span> различных тоавров</p>
+    </div>
+    
+    
+    
+    
+    
+</div>

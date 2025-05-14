@@ -1,0 +1,54 @@
+@model IEnumerable<Computer_Club.Models.Booking>
+
+@{
+    ViewData["Title"] = "Computers";
+}
+
+<h2>Bookings</h2>
+<table class="table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Computer</th>
+        <th>User</th>
+        <th>Start at</th>
+        <th>End at</th>
+        <th>Edit</th>
+        <th>Remove</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var booking in Model)
+    {
+        <tr>
+            <td>@booking.Id</td>
+            <td>@booking.Computer?.Name</td>
+            <td>@booking.User?.UserName</td>
+            <td>@booking.StartTime</td>
+            <td>@booking.EndTime</td>
+            <td>
+                <a href="@Url.Action("Edit", "Booking", new { id = booking.Id })">
+                    <button>Edit</button>
+                </a>
+            </td>
+            <td>
+                <form asp-action="Delete" asp-controller="Booking" method="post" asp-route-id="@booking.Id" onsubmit="return confirm('Are you sure you want to delete this booking?');">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="_method" value="DELETE"/> <!-- Имитация метода DELETE -->
+                    <button type="submit" class="btn btn-danger">Remove</button>
+                </form>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+<div>
+    <button>
+        <a class="nav-link text-dark" asp-area="" asp-controller="Booking" asp-action="Create">Book a computer</a>
+    </button>
+</div>
+<script>
+    function confirmDelete() {
+        return confirm("Are you sure you want to delete this event?");
+    }
+</script>

@@ -1,0 +1,41 @@
+@model Computer_Club.Models.User
+
+@{
+    ViewData["Title"] = "Edit computer info and status";   
+}
+
+<h2>Edit user</h2>
+
+
+
+<form asp-action="Edit">
+    <div class="form-group">
+        <label asp-for="UserName" class="control-label"></label>
+        <input asp-for="UserName" class="form-control" />
+        <span asp-validation-for="UserName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email" class="control-label">Email</label>
+        <input asp-for="Email" class="form-control"/>
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="IsAdmin" class="control-label">Admin</label>
+        <select asp-for="IsAdmin" class="form-control">
+            <option value="true" >true</option>
+            <option value="false">false</option>
+        </select>
+        <span asp-validation-for="IsAdmin" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>
+
+    
+
+<script>
+    
+    const check = document.querySelector('#IsBooked')
+    console.dir(check)
+</script>

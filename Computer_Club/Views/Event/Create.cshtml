@@ -1,0 +1,29 @@
+@model Computer_Club.Models.Event
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create new event</h2>
+
+<form asp-action="Create" method="post">
+    @Html.ValidationSummary(true)
+    
+    <div>
+        <label for="EventName">Name</label>
+        <input type="text" id="EventName" name="EventName" value="@Model.EventName" required/>
+    </div>
+    <div class="form-group">
+        <label for="EventDescription">Description</label>
+        <input type="text" id="EventDescription" name="EventDescription" value="@Model.EventDescription" required/>
+    </div>
+    <div>
+        <label for="EventStartTime">Start at</label>
+        <input type="datetime-local" id="EventStartTime" name="EventStartTime" value="@Model.EventStartTime.ToString("yyyy-MM-ddTHH:mm")" required/>
+    </div>
+    <div>
+        <label for="EventEndTime">End at</label>
+        <input type="datetime-local" id="EventEndTime" name="EventEndTime" value="@Model.EventEndTime" required/>
+    </div>
+    <button type="submit">Create</button>
+</form>

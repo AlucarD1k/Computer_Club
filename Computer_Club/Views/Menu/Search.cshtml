@@ -1,0 +1,61 @@
+@model Computer_Club.ViewModels.BookingSearchViewModel
+@{
+    ViewData["Title"] = "Search Bookings";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="get" asp-controller="Menu" asp-action="Search" class="mb-4 row">
+    <div class="col-md-4">
+        <label class="form-label">Select Computer</label>
+        <select name="selectedComputerId" class="form-control">
+            @* Correctly select this option if no specific computer ID is provided *@
+            <option value="" selected="@(Model.SelectedComputerId == null)">-- All Computers --</option>
+            @foreach (var comp in Model.Computers)
+            {
+                @* Use Razor's boolean attribute handling.
+                   If (Model.SelectedComputerId == comp.Id) is true, it renders selected="selected".
+                   If false, the selected attribute is omitted entirely.
+                *@
+                <option value="@comp.Id" selected="@(Model.SelectedComputerId == comp.Id)">@comp.Name</option>
+            }
+        </select>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label">Select Date</label>
+        <input type="date" name="selectedDate" value="@Model.SelectedDate?.ToString("yyyy-MM-dd")" class="form-control" />
+    </div>
+    <div class="col-md-4 align-self-end">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+</form>
+
+@if (Model.Bookings.Any())
+{
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>User</th>
+            <th>Computer</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var booking in Model.Bookings)
+        {
+            <tr>
+                <td>@booking.User.UserName</td>
+                <td>@booking.Computer.Name</td>
+                <td>@booking.StartTime</td>
+                <td>@booking.EndTime</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">No bookings found for the selected criteria.</div>
+}
+

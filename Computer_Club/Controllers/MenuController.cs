@@ -1,4 +1,5 @@
 using Computer_Club.Models;
+using Computer_Club.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -123,4 +124,38 @@ public class MenuController : Controller
         }
         return BadRequest();
     }
+    
+    [HttpGet]
+    public IActionResult Search(int? selectedComputerId, DateTime? selectedDate)
+    {
+        var bookingsQuery = _context.Bookings
+            .Include(b => b.User)
+            .Include(b => b.Computer)
+            .AsQueryable();
+
+        if (selectedComputerId.HasValue)
+        {
+            bookingsQuery = bookingsQuery
+                .Where(b => b.ComputerId == selectedComputerId.Value);
+        }
+
+        if (selectedDate.HasValue)
+        {
+            bookingsQuery = bookingsQuery
+                .Where(b => b.StartTime.Date == selectedDate.Value.Date);
+        }
+
+        var model = new BookingSearchViewModel()
+        {
+            Bookings = bookingsQuery
+                .OrderBy(b => b.StartTime)
+                .ToList(),
+            SelectedComputerId = selectedComputerId,
+            SelectedDate = selectedDate,
+            Computers = _context.Computers.ToList()
+        };
+
+        return View("Search", model);
+    }
+
 }

@@ -1,61 +1,98 @@
-@model Computer_Club.ViewModels.EventSearchViewModel
 @{
-    ViewData["Title"] = "Search Events";
+    ViewData["Title"] = "Search Events (Session-based)";
 }
 
 <h2>@ViewData["Title"]</h2>
 
-<form method="get" asp-action="Search" class="row mb-4">
+<div class="row mb-4">
     <div class="col-md-4">
-        <label class="form-label">Name contains</label>
-        <input type="text" name="nameFilter"
-               value="@Model.NameFilter"
-               class="form-control" />
+        <input type="text" id="nameFilter" placeholder="Name contains…" class="form-control" />
     </div>
     <div class="col-md-3">
-        <label class="form-label">From date</label>
-        <input type="date" name="fromDate"
-               value="@Model.FromDate?.ToString("yyyy-MM-dd")"
-               class="form-control" />
+        <input type="date" id="fromDate" class="form-control" />
     </div>
     <div class="col-md-3">
-        <label class="form-label">To date</label>
-        <input type="date" name="toDate"
-               value="@Model.ToDate?.ToString("yyyy-MM-dd")"
-               class="form-control" />
+        <input type="date" id="toDate" class="form-control" />
     </div>
-    <div class="col-md-2 align-self-end">
-        <button type="submit" class="btn btn-primary w-100">Search</button>
+    <div class="col-md-2">
+        <button class="btn btn-secondary w-100" onclick="resetFilters()">Сбросить</button>
     </div>
-</form>
+</div>
 
-@if (Model.Results.Any())
-{
-    <table class="table table-bordered">
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Starts</th>
-            <th>Ends</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach (var ev in Model.Results)
-        {
-            <tr>
-                <td>@ev.EventName</td>
-                <td>@ev.EventDescription</td>
-                <td>@ev.EventStartTime</td>
-                <td>@ev.EventEndTime</td>
-            </tr>
+<div id="resultsContainer"></div>
+<div id="resultsCount" class="mt-2 text-muted"></div>
+
+@section Scripts {
+    <script>
+        let allData = [];
+
+        function render(results) {
+            const container = document.getElementById('resultsContainer');
+            const counter = document.getElementById('resultsCount');
+
+            if (!results.length) {
+                container.innerHTML = '<div class="alert alert-info">No events found.</div>';
+                counter.innerText = '';
+                return;
+            }
+
+            let html = `<table class="table table-bordered">
+                <thead><tr>
+                    <th>Name</th><th>Description</th><th>Start</th><th>End</th>
+                </tr></thead><tbody>`;
+            for (const e of results) {
+                html += `<tr>
+                    <td>${e.EventName}</td>
+                    <td>${e.EventDescription}</td>
+                    <td>${new Date(e.Start).toLocaleString()}</td>
+                    <td>${new Date(e.End).toLocaleString()}</td>
+                </tr>`;
+            }
+            html += '</tbody></table>';
+            container.innerHTML = html;
+            counter.innerText = `Найдено: ${results.length}`;
         }
-        </tbody>
-    </table>
-}
-else
-{
-    <div class="alert alert-info">
-        No events found for these filters.
-    </div>
+
+        function filterData(data) {
+            const name = document.getElementById('nameFilter').value.toLowerCase();
+            const from = document.getElementById('fromDate').value;
+            const to = document.getElementById('toDate').value;
+
+            return data.filter(e => {
+                if (name && !e.EventName.toLowerCase().includes(name)) return false;
+                if (from && new Date(e.Start) < new Date(from)) return false;
+                if (to && new Date(e.End) > new Date(new Date(to).setHours(23, 59, 59))) return false;
+                return true;
+            });
+        }
+
+        function resetFilters() {
+            document.getElementById('nameFilter').value = '';
+            document.getElementById('fromDate').value = '';
+            document.getElementById('toDate').value = '';
+            render(allData);
+        }
+
+        function debounce(fn, ms) {
+            let t;
+            return (...args) => {
+                clearTimeout(t);
+                t = setTimeout(() => fn.apply(this, args), ms);
+            };
+        }
+
+        async function init() {
+            const resp = await fetch('/Event/SessionEventsJson');
+            allData = await resp.json();
+            render(allData);
+
+            const inputs = ['nameFilter', 'fromDate', 'toDate'];
+            const debounced = debounce(() => render(filterData(allData)), 300);
+            inputs.forEach(id =>
+                document.getElementById(id).addEventListener('input', debounced)
+            );
+        }
+
+        init();
+    </script>
 }

@@ -11,9 +11,13 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 //подключаем сервис для обновления броней
 builder.Services.AddHostedService<BookingUpdateService>();
+builder.Services.AddSession();
+builder.Services.AddControllersWithViews()
+    .AddSessionStateTempDataProvider();
 
 
 var app = builder.Build();
+app.UseSession();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

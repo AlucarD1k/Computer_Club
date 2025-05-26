@@ -1,4 +1,5 @@
 using Computer_Club.Models;
+using Computer_Club.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
@@ -183,6 +184,33 @@ public class EventController : Controller
         // Если ModelState не валидна, восстановим список пользователей для повторного отображения
         model.AllUsers = _context.Users.Where(u => u.IsAdmin == false).ToList();
         return View(model);
+    }
+    
+    // GET: /Event/Search
+    [HttpGet]
+    public IActionResult Search(string nameFilter, DateTime? fromDate, DateTime? toDate)
+    {
+        // базовый запрос
+        var q = _context.Events.AsQueryable();
+        
+        if (!string.IsNullOrWhiteSpace(nameFilter))
+            q = q.Where(e => e.EventName.ToLower().Contains(nameFilter.ToLower()));
+
+        if (fromDate.HasValue)
+            q = q.Where(e => e.EventStartTime.Date >= fromDate.Value.Date);
+
+        if (toDate.HasValue)
+            q = q.Where(e => e.EventEndTime.Date <= toDate.Value.Date);
+
+        var vm = new EventSearchViewModel()
+        {
+            NameFilter  = nameFilter,
+            FromDate    = fromDate,
+            ToDate      = toDate,
+            Results     = q.OrderBy(e => e.EventStartTime).ToList(),
+        };
+
+        return View(vm);
     }
 
 }

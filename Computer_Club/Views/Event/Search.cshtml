@@ -1,0 +1,61 @@
+@model Computer_Club.ViewModels.EventSearchViewModel
+@{
+    ViewData["Title"] = "Search Events";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="get" asp-action="Search" class="row mb-4">
+    <div class="col-md-4">
+        <label class="form-label">Name contains</label>
+        <input type="text" name="nameFilter"
+               value="@Model.NameFilter"
+               class="form-control" />
+    </div>
+    <div class="col-md-3">
+        <label class="form-label">From date</label>
+        <input type="date" name="fromDate"
+               value="@Model.FromDate?.ToString("yyyy-MM-dd")"
+               class="form-control" />
+    </div>
+    <div class="col-md-3">
+        <label class="form-label">To date</label>
+        <input type="date" name="toDate"
+               value="@Model.ToDate?.ToString("yyyy-MM-dd")"
+               class="form-control" />
+    </div>
+    <div class="col-md-2 align-self-end">
+        <button type="submit" class="btn btn-primary w-100">Search</button>
+    </div>
+</form>
+
+@if (Model.Results.Any())
+{
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Starts</th>
+            <th>Ends</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var ev in Model.Results)
+        {
+            <tr>
+                <td>@ev.EventName</td>
+                <td>@ev.EventDescription</td>
+                <td>@ev.EventStartTime</td>
+                <td>@ev.EventEndTime</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">
+        No events found for these filters.
+    </div>
+}
